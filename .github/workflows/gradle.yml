@@ -19,4 +19,4 @@ jobs:
       - uses: guardsquare/appsweep-action@main
         env:
           APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
-          INPUT_FILE: build/outputs/apk/release/app-release-unsigned.apk
+          INPUT_FILE: app/build/outputs/apk/release/app-release-unsigned.apk
