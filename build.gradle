@@ -1,21 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-buildscript {
-    plugins {
-        id "com.guardsquare.appsweep" version "0.1.5"
-        // Apply other plugins here
-    }
-
-    String getAppSweepApiKey() {
-        def propFile = rootProject.file("./local.properties")
-        def properties = new Properties()
-        properties.load(new FileInputStream(propFile))
-        return properties['APPSWEEP_API_KEY']
-    }
-    appsweep {
-        apiKey getAppSweepApiKey()
-    }
-    
+buildscript {    
     repositories {
         jcenter()
     }
