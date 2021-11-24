@@ -4,13 +4,14 @@ plugins {
   id "com.google.gms.google-services"
 }
 
-
-
 String getAppSweepApiKey() {
    def propFile = rootProject.file("./local.properties")
    def properties = new Properties()
    properties.load(new FileInputStream(propFile))
    return properties['APPSWEEP_API_KEY']
+}
+appsweep {
+   apiKey getAppSweepApiKey()
 }
 
 android {
