@@ -16,7 +16,6 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build
-      - uses: guardsquare/appsweep-action@main
-        env:
-          APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
-          INPUT_FILE: app/build/outputs/apk/release/app-release-unsigned.apk
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: uploadToAppSweepRelease
