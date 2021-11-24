@@ -21,8 +21,8 @@ jobs:
       - name: Gradle Build
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build --stracktrace
+          arguments: build --debug
       - name: Gradle uploadToAppSweep Task
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: uploadToAppSweepRelease --stacktrace
+          arguments: uploadToAppSweepRelease --debug
