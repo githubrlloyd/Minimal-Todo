@@ -1,10 +1,10 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-
 plugins {
   id "com.guardsquare.appsweep" version "0.1.5"
-  // Apply other plugins here
+  apply plugin: 'com.android.application'
+  apply plugin: 'com.google.gms.google-services'
 }
+
+
 
 String getAppSweepApiKey() {
    def propFile = rootProject.file("./local.properties")
