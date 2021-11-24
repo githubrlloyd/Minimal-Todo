@@ -1,6 +1,18 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
+plugins {
+  id "com.guardsquare.appsweep" version "0.1.5"
+  // Apply other plugins here
+}
+
+String getAppSweepApiKey() {
+   def propFile = rootProject.file("./local.properties")
+   def properties = new Properties()
+   properties.load(new FileInputStream(propFile))
+   return properties['APPSWEEP_API_KEY']
+}
+
 android {
     signingConfigs {
         release {
