@@ -18,11 +18,7 @@ jobs:
         env:
             APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
         run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
-      - name: Gradle Build
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build --debug
       - name: Gradle uploadToAppSweep Task
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: uploadToAppSweepRelease --debug
+          arguments: uploadToAppSweepRelease
